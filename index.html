@@ -201,7 +201,7 @@ layout: home
                                 {% for post in site.posts %}
                                 {% if post.categories contains 'notice' %}
                                 <div class="item">
-                                    <a href="{{ post.url }}">
+                                    <a href="/faq/news-anouncement.html#accordion-{{ counter }}">
                                         <span class="date">{{ post.date | date: "%Y/%m/%d" }}　</span>
                                         <span class="name"> {{ post.title }} </span>
                                     </a>
@@ -227,7 +227,7 @@ layout: home
                                 {% for post in site.posts %}
                                 {% if post.categories contains 'error' %}
                                 <div class="item">
-                                    <a href="/faq/news-anouncement.html#accordion-{{ counter }}">
+                                    <a href="/faq/news-maintenance.html#accordion-{{ counter }}">
                                         <span class="date">{{ post.date | date: "%Y/%m/%d" }}　</span>
                                         <span class="name"> {{ post.title }} </span>
                                     </a>
