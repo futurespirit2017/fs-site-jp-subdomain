@@ -10,7 +10,7 @@
                 {% if front_page.categories == 'package-plan' %}
                 {% if front_page.tag != 'related' %}
                 <li {% if front_page.url == page.url %} class="active" {% endif %}>
-                    <a href="{{ front_page.permalink }}" class="item">{{ front_page.title }} </a>
+                    <a href="{{ front_page.permalink | prepend: site.baseurl }}" class="item">{{ front_page.title }} </a>
                 </li>
                 {% endif %}
                 {% endif %}
@@ -23,7 +23,7 @@
                 {% if front_page.categories == 'package-plan' %}
                 {% if front_page.tag == 'related' %}
                 <li {% if front_page.url == page.url %} class="active" {% endif %}>
-                    <a href="{{ front_page.permalink }}" class="item">{{ front_page.title }} </a>
+                    <a href="{{ front_page.permalink | prepend: site.baseurl }}" class="item">{{ front_page.title }} </a>
                 </li>
                 {% endif %}
                 {% endif %}
@@ -32,22 +32,28 @@
         </li>
         <li class="parent"><a href="#"> サポート</a>
             <ul>
-                <li><a href="/faq/faq-list.html" class="item">よくある質問</a></li>
-                <li><a href="#" class="item">ご利用開始までの流れ</a></li>
-                <li><a href="#" class="item">お知らせ</a></li>
-                <li><a href="#" class="item">障害・メンテナンス</a></li>
-                <li><a href="#" class="item">お問い合わせ</a></li>
-            </ul>
+                            {% assign sorted_pages = (site.pages | sort: 'priority') %}
+                            {% for front_page in sorted_pages %}
+                            {% if front_page.categories == 'faq' and front_page.tag != 'faq_cate_detail'%}
+                            <li {% if front_page.url == page.url %} class="active" {% endif %}>
+                                <a href="{{ front_page.url }}" class="item">{{ front_page.title }} </a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+
+              </ul>
         </li>
         <li class="parent"><a href="#"> 会社情報</a>
-            <ul>
-                <li><a href="#" class="item">会社概要</a></li>
-                <li><a href="#" class="item">アクセス</a></li>
-                <li><a href="#" class="item">プライバシーポリシー</a></li>
-                <li><a href="#" class="item">サービス規約</a></li>
-                <li><a href="#" class="item">ウェブサイトご利用規約</a></li>
-                <li><a href="#" class="item">反社会的勢力への対応</a></li>
-            </ul>
+            <ul class="menu">
+                            {% assign sorted_pages = (site.pages | sort: 'priority') %}
+                            {% for front_page in sorted_pages %}
+                            {% if front_page.categories == 'company'  %}
+                            <li {% if front_page.url == page.url %} class="active" {% endif %}>
+                                <a href="{{ front_page.url }}" class="item">{{ front_page.title }} </a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
         </li>
     </ul>
     <div class="language">
