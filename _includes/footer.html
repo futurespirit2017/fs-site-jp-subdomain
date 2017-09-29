@@ -12,7 +12,7 @@
                             {% if front_page.categories == 'package-plan' %}
                             {% if front_page.tag != 'related' %}
                             <li>
-                                <a href="{{ front_page.permalink }}" class="item">{{ front_page.title }} </a>
+                                <a href="{{ front_page.permalink | prepend: site.baseurl }}" class="item">{{ front_page.title }} </a>
                             </li>
                             {% endif %}
                             {% endif %}
@@ -30,7 +30,7 @@
                             {% if front_page.categories == 'package-plan' %}
                             {% if front_page.tag == 'related' %}
                             <li>
-                                <a href="{{ front_page.permalink }}" class="item">{{ front_page.title }} </a>
+                                <a href="{{ front_page.permalink | prepend: site.baseurl }}" class="item">{{ front_page.title }} </a>
                             </li>
                             {% endif %}
                             {% endif %}
