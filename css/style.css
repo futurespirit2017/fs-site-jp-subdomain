@@ -1220,7 +1220,7 @@ h1 + p .btn.btn-xs.btn-outline { margin: 0 5px 10px 0; background-color: #fff !i
   a.btn-lg, span.btn-lg { line-height: 60px; font-size: 12px; display: block; }
   button.btn-lg { height: 60px; }
   .btn-xs { line-height: 27px; font-size: 10px; }
-  .list-steps > .item .top .btn { line-height: 43px !important; padding-left: 20px !important; font-size: 16px; }
+  .list-steps > .item .top .btn { line-height: 43px !important; padding-left: 20px !important; font-size: 14px; }
   .btn-md { line-height: 40px !important; height: 40px !important; }
   section.pb-50 { padding-bottom: 20px; }
   .group-btn-mobile { padding: 0 20px; }
