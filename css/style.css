@@ -1138,7 +1138,7 @@ h1 + p .btn.btn-xs.btn-outline { margin: 0 5px 10px 0; background-color: #fff !i
   .row-section { padding: 20px 0; }
   .section-feature .items-grid .item { padding: 10px; }
   .section-feature .latestnews .item > a .date { width: 120px; }
-  .list-steps > .item .text { font-size: 16px; line-height: 26px; }
+  .list-steps > .item .text { font-size: 14px; line-height: 24px; }
   .section-steps ~ .section-option { padding-top: 70px; margin-top: -70px; }
   .list-steps > .item .top .btn { width: 220px; }
   .pricingTable.pricing-style2 .item .top { position: absolute; top: -23px; right: 0; }
