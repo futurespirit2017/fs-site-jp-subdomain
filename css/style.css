@@ -168,7 +168,7 @@ ul.list-square.large li:before { top: 11px; }
 ul.list-arrow li:before { content: ">"; width: 11px; }
 
 ul.list-value li { overflow: hidden; font-weight: 700; font-size: 13px; margin: 0; padding: 10px 0; border-bottom: 1px solid #E5E5E5; }
-ul.list-value li .value { float: right; width: 100px; font-size: 17px; }
+ul.list-value li .value { float: right; width: 100px; font-size: 15px; }
 
 .menu-tabs { border-bottom: 2px solid #CBCBCB; margin: 0 0 50px; list-style: none; }
 .menu-tabs li { margin-bottom: -2px; float: left; }
@@ -356,7 +356,7 @@ body.homepage #header .menu-btn { display: none; }
 .pricingTable.pricing-style2 .item.fixheight .title3 { margin: 15px 0; font-size: 66px; color: #4B8F00; }
 .pricingTable.no-active .item { transform: translateY(0); -webkit-transform: translateY(0); }
 .pricingTable.no-active .item .title3 { margin: 0 !important; }
-.pricingTable.no-active .item ul.list-value li .value { width: 120px; }
+.pricingTable.no-active .item ul.list-value li .value { width: 200px; }
 .pricingTable.pricingDomain { padding: 50px 0 20px; }
 .pricingTable.pricingDomain ul.list-value { border-top: 1px solid #E5E5E5; margin-top: 10px; }
 .pricingTable.pricingDomain .domain span { display: block; border: 1px solid #CBCBCB; margin-bottom: 10px; text-align: center; line-height: 30px; font-size: 16px; font-weight: 700; }
