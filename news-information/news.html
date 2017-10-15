@@ -1,25 +1,28 @@
 ---
-title: "障害/メンテナンス情報"
+title: "お知らせ"
 layout: faq
 categories: faq
 tag: news
-priority: 4
+priority: 3
+permalink: "/news.html"
 ---
 <ul class="menu-tabs-mobile menu-tabs color large items-2" >
 {% for front_page in site.pages %}
     {% if front_page.tag == 'news' %}
     <li {% if front_page.url == page.url %} class="active" {% endif %}>
-        <a href="{{ front_page.url}}">{{ front_page.title }} </a>
+        <a href="{{ front_page.url }}">{{ front_page.title }} </a>
     </li>
     {% endif %}
 {% endfor %}
 </ul>
+
+
 <div class=" pb-50 ">
     <div class="accordion-notice accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
         {% assign counter = 0 %}
         {% assign posts = site.posts | limit: 10 %}
         {% for post in posts %}
-        {% if post.categories contains 'error' %}
+        {% if post.categories contains 'notice' %}
         {% assign counter = counter | plus: 1 %}
         <div class="panel">
             <div class="panel-heading" role="tab">
@@ -44,6 +47,7 @@ priority: 4
         {% endfor %}
     </div>
 </div>
+
 {% if counter > 10 %}
 <div class="pagination">
     <a href="#" class="prev"> <i class="icon-arrow-1"></i> PRV </a>

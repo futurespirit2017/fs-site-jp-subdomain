@@ -1,22 +1,22 @@
 ---
-title: "よくある質問"
+title: FAQ - サポート・お取引について
 layout: faq
 categories: faq
 tag: faq_cate_detail
 ---
-<a href="{{site.baseurl}}/faq/faq-list.html" class="visible-sm btn btn-xs pull-right">よくある質問 TOP</a>
+<a href="{{site.baseurl}}/faq/faq-list.html" class="visible-sm btn btn-xs pull-right">よくある質問</a>
 <h1 class="h2">
     よくある質問
 </h1>
 <ul class="list-square large">
-    <li class="fs-22">レンタルサーバーについて</li>
+    <li class="fs-22">サポート・お取引について</li>
 </ul>
 
 
 <div class="accordion-faq accordion-group" id="accordion" role="tablist" aria-multiselectable="true">
     {% assign counter = 0 %}
     {% for post in site.posts %}
-    {% if post.categories contains 'notice' %}
+    {% if post.categories contains 'faq-support' %}
     {% assign counter = counter | plus: 1 %}
 
     <div class="panel">
